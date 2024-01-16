@@ -1,0 +1,186 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+body{
+ background-image: url('background-pattern-mobile.svg');
+ background-position: center top ;
+ background-color:  hsl(275, 100%, 97%);
+ background-repeat: no-repeat;
+ background-size: 100%;
+ background-attachment: scroll;
+ display: grid;
+ place-items: center;
+ height: 100vh;
+ font-size: 16px;
+ font-family: 'Work Sans', sans-serif;;
+ 
+}
+
+
+.myAccordion{
+    background-color: hsl(0, 0%, 100%);
+    width: 370px;
+    border-radius: 10px;
+    padding: 2rem 1.5rem;
+    transform: translateY(90px);
+ 
+}
+
+
+.myAccordion h1{
+    
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.8rem;
+    padding-bottom: 2rem;
+    color: hsl(292, 42%, 14%);
+}
+
+.myAccordion h1::before{
+    content: " ";
+    background-image: url('icon-star.svg');
+    background-size: 1.5rem 1.2rem;
+    padding-right: 1rem;
+    transform: translateY(1px);
+    background-repeat: no-repeat;
+    display: inline-block; /* Ensures the pseudo-element has dimensions */
+    width: 1.5rem;
+    height: 1.2rem;
+}
+
+
+.accordion-item{
+   background-color: hsl(0, 0%, 100%);
+   border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+
+
+.card-header{
+  z-index: 1;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 0;
+  justify-content: space-between;
+  border-radius: 0;
+  outline: 0;
+  background-color: transparent;
+  padding: 1.2rem 0;
+  padding-right: 0.8rem;
+  margin-bottom: 0;
+  overflow-anchor: none;
+  cursor: pointer;
+  transition: color .15s ease-in-out;
+}
+
+
+.accordion-item:hover h2{
+    color: #AD28EB;
+}
+
+h2 {
+    background-color: transparent;
+    color: hsl(292, 42%, 14%);
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1rem;
+    line-height: 1.3rem;
+    text-wrap: wrap;
+    text-align: left;
+    max-width: 210px;
+    font-weight: 600;
+    transition: color .15s ease-in-out;
+}
+
+
+.icon{
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+
+.card-body{
+    padding: 1rem 0;
+    padding-right: 0.5rem;
+}
+
+
+.card-body p{
+    font-family: inherit;
+    color: hsl(292, 16%, 49%);
+    background-color: transparent;
+    font-weight: 200;
+    font-size: 0.85rem;
+    margin-bottom: 0.8rem;
+}
+
+.accordion-collapse{
+    display: none;
+}
+
+  
+ 
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1400px){
+    body{
+        background-image: url('background-pattern-desktop.svg');
+    }
+
+
+  .myAccordion{
+    width: 600px;
+    transform: translateY(30px);
+    padding: 2.5rem 1.3rem;
+  }
+
+
+  .myAccordion h1{
+
+    font-size: 2.5rem;
+  }
+
+
+  .myAccordion h1::before{
+    background-size: 2.1rem;
+    padding-right: 1.3rem;
+    transform: translateY(3px);
+    width: 2.1rem;
+    height: 2.1rem;
+  }
+
+
+
+.card-header{
+    padding: 2rem 0;
+    padding-right: 0.5rem;
+}
+  h2{
+    font-size: 1.18rem;
+    max-width: 100%;
+  }
+
+  .card-body{
+    padding-right: 1rem;
+  }
+
+  .card-body p{
+    font-size: 1.1rem;
+    font-weight: 400;
+  }
+}
